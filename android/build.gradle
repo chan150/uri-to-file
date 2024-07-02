@@ -32,4 +32,9 @@ android {
     defaultConfig {
         minSdkVersion 16
     }
+
+    // Conditional for compatibility with AGP <4.2.
+    if (project.android.hasProperty("namespace")) {
+        namespace 'in.lazymanstudios.uri_to_file'
+    }
 }
